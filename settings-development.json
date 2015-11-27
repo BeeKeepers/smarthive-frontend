@@ -1,6 +1,10 @@
 {
   "brokerHost": "localhost",
+  "brokerExchange": "smarthive",
+  "subscriptions": [
+    "web"
+  ],
   "public": {
-    
+
   }
 }

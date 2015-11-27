@@ -1,9 +1,5 @@
 var open = Meteor.npmRequire('amqplib').connect('amqp://' + Meteor.settings.brokerHost);
 
-var susbscriptions = [
-  'attacks'
-];
-
 /**
  * Open connection with AMQP Broker and subscribe to events.
  */
@@ -13,13 +9,13 @@ open
 })
 .then(function(ch) {
   Channel = ch;
-  return ch.assertExchange('hive', 'direct', {durable: false});
+  return ch.assertExchange(Meteor.settings.brokerExchange, 'direct', {durable: false});
 })
 .then(function() {
   Channel.assertQueue('', {exclusive: true})
   .then(function(qok) {
-    susbscriptions.forEach(function(sub) {
-      Channel.bindQueue(qok.queue, 'hive', sub);
+    Meteor.settings.subscriptions.forEach(function(sub) {
+      Channel.bindQueue(qok.queue, Meteor.settings.brokerExchange, sub);
     });
     Channel.consume(qok.queue, callback, {noAck: true});
   })
