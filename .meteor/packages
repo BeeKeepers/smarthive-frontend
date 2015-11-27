@@ -22,3 +22,4 @@ bootswatch:flatly
 iron:router
 stylus
 fortawesome:fontawesome
+ccorcos:transitioner

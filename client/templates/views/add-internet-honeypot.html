@@ -1,9 +1,34 @@
 <template name="addInternetHoneypot">
-  <div class="add-internet-honeypot">
-    <div class="container-fluid">
-      <div class="page-header">
-        <h1>Create Internet Honeypot</h1>
-      </div>
+<div class="add-internet-honeypot">
+  <div class="container-fluid">
+    <div class="page-header">
+      <h1>Create Internet Honeypot</h1>
     </div>
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Add New</legend>
+        <div class="form-group">
+          <label for="hostname" class="col-md-2 control-label">Hostname</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control" name="hostname" placeholder="HoneypotA" autofocus>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="select" class="col-lg-2 control-label">Location</label>
+          <div class="col-lg-4">
+            <select class="form-control" name="location">
+              <option>London (UK)</option>
+              <option disabled>Oregon (USA)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+            <button type="submit" class="btn btn-primary">Create</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
   </div>
+</div>
 </template>

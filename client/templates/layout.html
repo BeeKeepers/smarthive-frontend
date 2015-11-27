@@ -8,6 +8,8 @@
 <template name="layout">
   {{> sidebar}}
   <div class="content">
-    {{> yield }}
+    {{#transitioner}}
+      {{> yield}}
+    {{/transitioner}}
   </div>
 </template>
