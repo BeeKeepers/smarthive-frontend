@@ -4,9 +4,15 @@ This is a frontend for [SmartHive project](https://github.com/BeeKeepers).
 
 ## Development
 
-It's a [Meteor Application](https://www.meteor.com/).
+### Prerequisites
+
+Just a regular [Meteor installation](https://www.meteor.com/install)
 
 Start development server on localhost:3000
 ```bash
-meteor
+meteor --settings settings-development.json
 ```
+
+## Deployment
+
+TBD
