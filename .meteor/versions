@@ -1,8 +1,10 @@
+appshore:leaflet-awesome-markers@1.0.3
 autopublish@1.0.4
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
 base64@1.0.4
+bevanhunt:leaflet@1.3.1
 binary-heap@1.0.4
 blaze@2.1.3
 blaze-html-templates@1.0.1
@@ -48,6 +50,8 @@ livedata@1.0.15
 logging@1.0.8
 meteor@1.1.10
 meteor-base@1.0.1
+meteorhacks:async@1.0.0
+meteorhacks:npm@1.5.0
 minifiers@1.1.7
 minimongo@1.0.10
 mobile-experience@1.0.1
@@ -55,6 +59,7 @@ mobile-status-bar@1.0.6
 mongo@1.1.3
 mongo-id@1.0.1
 mrt:jquery-validate@0.1.0
+npm-container@1.2.0
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 ordered-dict@1.0.4
@@ -79,3 +84,4 @@ url@1.0.5
 velocityjs:velocityjs@1.2.1
 webapp@1.2.3
 webapp-hashing@1.0.5
+yuukan:streamy@1.3.0
