@@ -1,12 +1,25 @@
 Template.addInternetHoneypot.onRendered(function() {
   $('form').validate({
     valid: function(event, options) {
+      //TODO: get from settings
+      event.preventDefault();
+      var honeys = [
+        'amun',
+        'cowrie',
+        'telnet',
+        'tom'
+      ];
       var options = {
         hostname: event.target.hostname.value,
-        location: event.target.location.value
+        location: event.target.location.value,
+        sshkey: event.target.sshkey.value,
+        honeys: [],
       };
-      event.preventDefault();
-      console.log(event.target.hostname.value);
+      honeys.forEach(function(hn) {
+        if (event.target['honey-'+hn].checked) {
+          options.honeys.push(hn);
+        }
+      });
       Meteor.call('createInternetHoneypot', options);
       sAlert.success('Honeypot creation started');
     },

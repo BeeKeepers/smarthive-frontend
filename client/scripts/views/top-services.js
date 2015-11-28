@@ -6,12 +6,12 @@ Template.topServices.onRendered(function() {
       datasets: [
           {
               label: 'Dataset',
-              fillColor: 'rgba(220,220,220,0.2)',
-              strokeColor: 'rgba(220,220,220,1)',
-              pointColor: 'rgba(220,220,220,1)',
+              fillColor: 'rgba(231,76,60,0.2)',
+              strokeColor: 'rgba(231,76,60,1)',
+              pointColor: 'rgba(231,76,60,1)',
               pointStrokeColor: '#fff',
               pointHighlightFill: '#fff',
-              pointHighlightStroke: 'rgba(220,220,220,1)',
+              pointHighlightStroke: 'rgba(231,76,60,1)',
               data: [88, 67, 12, 4]
           }
       ]
