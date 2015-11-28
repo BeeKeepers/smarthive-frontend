@@ -35,11 +35,13 @@ function callback(msg) {
   //     routingKey: 'attacks' },
   //  properties: {},
   // content: <Buffer 68 6f 6c 61 61 61 61 61> }
-  var attacks;
-  console.log('AMQP message! ', msg);
+  console.log('AMQP message! ', msg.content.toString('utf8'));
   try {
-    attacks = JSON.parse(msg.content.toString('utf8'));
-    Streamy.broadcast('attacks', { data: attacks });
+    event = JSON.parse(msg.content.toString('utf8'));
+    if (event.event_type === 'trend_attack') {
+      Streamy.broadcast('attacks', { data: event.event_payload });
+    }
+
   } catch (err) {
     console.log('Bad msg');
   }
