@@ -20,7 +20,15 @@
             </tr>
           </thead>
           <tbody>
-
+            {{#each honeypots}}
+             <tr>
+               <td>{{@index}}</td>
+               <td>{{hostname}}</td>
+               <td>{{location}}</td>
+               <td>1234</td>
+               <td>Active</td>
+             </tr>
+             {{/each}}
           </tbody>
         </table>
       </div>
