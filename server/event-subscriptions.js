@@ -36,6 +36,7 @@ function callback(msg) {
   //  properties: {},
   // content: <Buffer 68 6f 6c 61 61 61 61 61> }
   var attacks;
+  console.log('AMQP message! ', msg);
   try {
     attacks = JSON.parse(msg.content.toString('utf8'));
     Streamy.broadcast('attacks', { data: attacks });
