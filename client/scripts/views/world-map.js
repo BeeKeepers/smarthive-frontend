@@ -6,8 +6,19 @@ Template.worldMap.onRendered(function() {
   //addHoneypot(51.508, -0.11);
   //addHoneypot(43, -87);
 
+  setTimeout(function() { // TODO: sync this properly
+    InternetHoneypots.find().fetch().forEach(function(elem) {
+      var coords = Meteor.settings.public.coords[elem.location];
+      addHoneypot(coords[0], coords[1]);
+    });
+  }, 1000);
+
   Streamy.on('attacks', function(d) {
     paintAttacks(d.data);
+  });
+
+  Streamy.on('new_honeypot', function(d) {
+    addHoneypot(d.data[0], d.data[1]);
   });
 
   function createMap() {

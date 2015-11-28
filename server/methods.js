@@ -11,6 +11,9 @@ Meteor.methods({
 
     //TODO: server side validate this (Joi)
     Channel.publish(Meteor.settings.brokerExchange, 'honeypot-manager', new Buffer(JSON.stringify(args)));
+
+    //TODO: move this to event callback
+    Streamy.broadcast('new_honeypot', { data: Meteor.settings.public.coords[args.location] });
   }
 
 });

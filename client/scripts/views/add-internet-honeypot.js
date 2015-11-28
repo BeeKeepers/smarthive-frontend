@@ -22,6 +22,7 @@ Template.addInternetHoneypot.onRendered(function() {
       });
       Meteor.call('createInternetHoneypot', options);
       sAlert.success('Honeypot creation started');
+      Router.go('/internet');
     },
     invalid:function(event, options) {
       sAlert.error('Form invalid. Please check fields');
