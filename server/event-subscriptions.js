@@ -18,7 +18,7 @@ open
       Channel.bindQueue(qok.queue, Meteor.settings.brokerExchange, sub);
     });
     Channel.consume(qok.queue, callback, {noAck: true});
-  })
+  });
 });
 
 

@@ -1,6 +1,7 @@
 <head>
   <meta charset="UTF-8">
   <title>SmartHive | Webapp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 </body>
@@ -9,6 +10,7 @@
   {{> sAlert}}
   {{> sidebar}}
   <div class="content">
+    {{> loginbar}}
     {{#transitioner}}
       {{> yield}}
     {{/transitioner}}
