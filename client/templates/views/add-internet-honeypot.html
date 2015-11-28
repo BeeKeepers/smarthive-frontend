@@ -17,15 +17,43 @@
           <label for="select" class="col-lg-2 control-label">Location</label>
           <div class="col-lg-4">
             <select class="form-control" name="location" data-required>
-              <option>London (UK)</option>
-              <option disabled>Oregon (USA)</option>
+              <option value="nyc1">New York City 1</option>
+              <option value="ams1">Amsterdam 1</option>
+              <option value="sfo1">San Francisco 1</option>
+              <option value="nyc2">New York City 2</option>
+              <option value="ams2">Amsterdam 2</option>
+              <option value="sgp1">Singapur 1</option>
+              <option value="lon1">London 1</option>
+              <option value="nyc3">New York City 3</option>
+              <option value="ams3">Amsterdam 3</option>
+              <option value="fra1">Frankfurt 1</option>
+              <option value="tor1">Toronto 1</option>
             </select>
           </div>
         </div>
         <div class="form-group">
-          <label for="select" class="col-lg-2 control-label">SSH Key</label>
+          <label for="honeyselect" class="col-lg-2 control-label">Honeypot Selection</label>
+          <div class="col-lg-4">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" name="honey-amun"> Amun
+              </label>
+              <label>
+                <input type="checkbox" name="honey-cowrie"> Cowrie
+              </label>
+              <label>
+                <input type="checkbox" name="honey-telnet"> TOM
+              </label>
+              <label>
+                <input type="checkbox" name="honey-tom"> Telnet
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="sshkey" class="col-lg-2 control-label">SSH Key</label>
           <div class="col-md-8">
-            <textarea name="sshkey" rows="8" cols="40" class="form-control" data-required 
+            <textarea name="sshkey" rows="8" cols="40" class="form-control" data-required
               placeholder="If you want to access honeypot direcly, paste your SSH pk here"
             ></textarea>
           </div>
